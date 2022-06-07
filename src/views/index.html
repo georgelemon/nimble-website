@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nimble 👑 Nim's Package Manager</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/app.css">
+    <script src="assets/app.min.js"></script>
+    <style>
+        .box {
+            min-height: 141px;
+            max-height: 141px;
+            overflow: hidden;
+        }
+
+        .box h3 a {
+            font-weight: 500;
+        }
+
+        .light-theme #top-nav a {
+            color: darkblue;
+        }
+
+        .tags-area a {
+            /*color: #242830;*/
+        }
+
+        .spin-icon {
+            top: 34px;
+            right: 120px;
+            width: 24px;
+            zoom: 0.6;
+            height: 24px;
+            position: absolute;
+            -webkit-animation:spin 2.3s linear infinite;
+            -moz-animation:spin 2.3s linear infinite;
+            animation:spin 2.3s linear infinite;
+        }
+
+        .spin-icon svg {stroke: #f5e558;}
+
+        @-moz-keyframes spin { 
+            100% { -moz-transform: rotate(360deg); } 
+        }
+        @-webkit-keyframes spin { 
+            100% { -webkit-transform: rotate(360deg); } 
+        }
+        @keyframes spin { 
+            100% { 
+                -webkit-transform: rotate(360deg); 
+                transform:rotate(360deg); 
+            } 
+        }
+    </style>
+
+</head>
+<body class="dark-theme">
+    <main> <!-- #1c1c21 -->
+        <div class="container">
+            <div class="row" style="position:relative">
+                <div id="top-nav" class="col-12" style="position: absolute; left:0; right:0;">
+                    <div class="py-3">
+                        <div class="row">
+                            <div class="col-lg-3">
+                                <a href="/" class="logo fw-500 display-1 text-black text-decoration-none">
+                                </a>
+                            </div>
+                            <div class="col-lg-9 text-align-right pt-4">
+                                <a href="/about" class="text-decoration-none fw-500">What's Nimble?</a>
+                                <a href="/browse" class="text-decoration-none fw-500 mx-3">🔥 Browse all Packages</a>
+                                <a href="/publish" class="text-decoration-none fw-500 mx-3">🤟 Publish your Package</a>
+                                <a href="/blog" class="text-decoration-none fw-500 mx-3">🗞 Blog</a>
+                                <a href="https://github.com/nim-lang" class="text-decoration-none ms-3">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                                </a>
+                                <a href="#" class="text-decoration-none mx-3">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                                </a>
+                                <a href="#" class="text-decoration-none">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                                </a>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div id="hero-landing-page" class="row pt-10 align-content-center">
+                <div class="col-8 align-self-center text-align-center">
+                    <h4 class="h3 text-muted">&mdash; Nim's Ecosystem</h4>
+                    <h1 class="display-3 fw-bold">Build amazing things</h1>
+                    <p class=" fw-400 lh-1 mb-4">Discover Nim's ecosystem of packages, libraries, frameworks, and tools.</p>
+                    <div class="row">
+                        <div class="col-12 spotlight position-relative">
+                            <form action="">
+                                <input type="text" class="border-radius-full w-100" placeholder="Search for packages...">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="mt-4 tags-area">
+                        <a href="#">embedded-systems</a>
+                        <a href="#">web-framework</a>
+                        <a href="#">IoT</a>
+                        <a href="#">game-engine</a>
+                        <a href="#">command-line</a>
+                        <a href="#">parser</a>
+                        <a href="#">AI</a>
+                        <a href="#">network</a>
+                        <a href="#">yaml</a>
+                        <a href="#">front-end</a>
+                        <a href="#">template-engine</a>
+                        <a href="#">javascript</a>
+                        <a href="#">wrapper</a>
+                        <a href="#">robotics</a>
+                        <!-- <a href="#" class="btn border-radius-full btn-xl px-5">📚 Read Documentation</a> -->
+                        <!-- <a href="#" class="btn btn-link btn-xl">🖼 Publish your Package</a> -->
+                    </div>
+                </div>
+                <div class="col-lg-4 align-self-center">
+                    <img src="assets/01.png" width="415px" alt="">
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="container py-8">
+        <div class="row">
+            <div class="col-12">
+                <h1 class="fw-bold mb-2">Trending Packages</h1>
+            </div>
+        </div>
+        <div class="row g-4 mb-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+12K">
+                    <h3 class="lh-1 display-1 mb-2"><a href="#">compiler</a></h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Compiler package providing the compiler sources as a library</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">Nim</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+1K">
+                    <h3 class="lh-1 display-1 mb-2"><a href="#">jester</a></h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">🃏 The sinatra-like web framework for Nim. Jester provides a DSL for quickly creating...</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">dom96</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+400">
+                    <h3 class="lh-1 display-1 mb-2"><a href="#">pixie</a></h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Full-featured 2d graphics library for Nim language</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">treeform</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 4.0.0
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+12K">
+                    <h3 class="lh-1 display-1 mb-2">
+                        <a href="#">zippy</a>
+                    </h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Pure Nim implementation of deflate, zlib, gzip and zip</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">guzba</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 0.9.7
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+1K">
+                    <h3 class="lh-1 display-1 mb-2">
+                        <a href="#">schedules</a>
+                    </h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">A Nim scheduler library that lets you kick off jobs at regular intervals.</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">soasme</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+400">
+                    <h3 class="lh-1 display-1 mb-2">
+                        <a href="#">nico</a>
+                    </h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Game framework for the Nim programming language inspired by the PICO-8 API</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">ftsf</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-8">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="fw-bold mb-2">New Packages</h2>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+12K">
+                    <h3 class="lh-1 display-1 mb-2"><a href="#">compiler</a></h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Compiler package providing the compiler sources as a library</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">Nim</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+1K">
+                    <h3 class="lh-1 display-1 mb-2"><a href="#">jester</a></h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">🃏 The sinatra-like web framework for Nim. Jester provides a DSL for quickly creating...</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">dom96</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+400">
+                    <h3 class="lh-1 display-1 mb-2"><a href="#">pixie</a></h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Full-featured 2d graphics library for Nim language</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">treeform</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 4.0.0
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+12K">
+                    <h3 class="lh-1 display-1 mb-2">
+                        <a href="#">zippy</a>
+                    </h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Pure Nim implementation of deflate, zlib, gzip and zip</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">guzba</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 0.9.7
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+1K">
+                    <h3 class="lh-1 display-1 mb-2">
+                        <a href="#">schedules</a>
+                    </h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">A Nim scheduler library that lets you kick off jobs at regular intervals.</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">soasme</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <div class="box rounded p-3" stars="+400">
+                    <h3 class="lh-1 display-1 mb-2">
+                        <a href="#">nico</a>
+                    </h3>
+                    <p class="mb-0 pb-0" style="margin-bottom:0">Game framework for the Nim programming language inspired by the PICO-8 API</p>
+                    <ul class="package-box-meta-foot mt-1">
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
+                            <a href="#">ftsf</a>
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
+                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
+                            </svg> 5.1.2
+                        </li>
+                        <li class="text-gray">
+                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
+                            </svg>
+                            MIT
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="py-10 px-3">
+        <div class="container pt-4">
+            <div class="row mb-4">
+                <div class="col-lg-3">
+                    <h4 class="h5">Discover Nim 👑</h4>
+                    <ul>
+                        <li><a class="text-decoration-none" href="#">Learn Nim in 5 minutes</a></li>
+                        <li><a class="text-decoration-none" href="#">Nim basics tutorial</a></li>
+                        <li><a class="text-decoration-none" href="#">Official Playground</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="h5">Nim Tutorials for</h4>
+                    <ul>
+                        <li><a class="text-decoration-none" href="#">C programmers</a></li>
+                        <li><a class="text-decoration-none" href="#">Python programmers</a></li>
+                        <li><a class="text-decoration-none" href="#">TypeScript/JavaScript programmers</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3">
+                    <h4 class="h5">👑 Nim for...</h4>
+                    <ul>
+                        <li><a class="text-decoration-none" href="#">C programmers</a></li>
+                        <li><a class="text-decoration-none" href="#">Python programmers</a></li>
+                        <li><a class="text-decoration-none" href="#">TypeScript/JavaScript programmers</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row mt-3">
+                <div class="col-12 text-center mt-4 mx-auto">
+                    <a href="#" class="logo d-block mb-3 mx-auto bw"></a>
+                    <p>&copy; 2022 Nim & Contributors &mdash; All rights reserved</p>
+                    <p class="text-muted"><small>This website is available on <a href="#">GitHub</a> and contributions are welcome!<br>
+                        Original website design & logo by <a href="https://github.com/georgelemon">George Lemon</a>.</small></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            App.init({
+                indexedDBSearch: true
+            })
+
+            let spinIcon = document.querySelector('.spin-icon')
+            if(spinIcon) {
+                spinIcon.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="12" y1="2" x2="12" y2="6"></line><line x1="12" y1="18" x2="12" y2="22"></line><line x1="4.93" y1="4.93" x2="7.76" y2="7.76"></line><line x1="16.24" y1="16.24" x2="19.07" y2="19.07"></line><line x1="2" y1="12" x2="6" y2="12"></line><line x1="18" y1="12" x2="22" y2="12"></line><line x1="4.93" y1="19.07" x2="7.76" y2="16.24"></line><line x1="16.24" y1="7.76" x2="19.07" y2="4.93"></line></svg>'
+            }
+        });
+    </script>
+</body>
+</html>
