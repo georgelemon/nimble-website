@@ -56,392 +56,103 @@
 
 </head>
 <body class="dark-theme">
-    <main> <!-- #1c1c21 -->
+    <nav class="navbar navbar-expand-lg fixed-top py-3">
         <div class="container">
-            <div class="row" style="position:relative">
-                <div class="col-12 top-nav" style="position: absolute; left:0; right:0;">
-                    <div class="py-3">
-                        <div class="row">
-                            <div class="col-lg-3">
-                                <a href="/" class="logo fw-500 display-1 text-black text-decoration-none">
-                                </a>
-                            </div>
-                            <div class="col-lg-9 text-end pt-4">
-                                <a href="/about" class="text-decoration-none fw-500">What's Nimble?</a>
-                                <a href="#" class="text-decoration-none fw-500 mx-3">🔥 Browse all Packages</a>
-                                <a href="#" class="text-decoration-none fw-500 mx-3">🤟 Publish your Package</a>
-                                <a href="#" class="text-decoration-none fw-500 mx-3">🗞 Blog</a>
-                                <a href="https://github.com/nim-lang" class="text-decoration-none ms-3">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
-                                </a>
-                                <a href="#" class="text-decoration-none mx-3">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
-                                </a>
-                                <a href="#" class="text-decoration-none">
-                                    <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
-                                </a>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-            <div class="row pt-10 mt-4 mb-4 align-content-center">
-                <div class="col-12">
-                    <h1 class="fw-bold mb-2">Hot Weekly Articles</h1>
-                </div>
-                <div class="col-lg-3">
-                    <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1553227957-454e04fa8472?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)">
-                        <div class="featured-post-top position-absolute p-3 w-100 top-0">
-                            <a class="badge text-bg-light" href="#">Embedded Systems</a>
-                        </div>
-                        <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
-                            <div class="inner-post-card position-relative">
-                                <h2 class="h4 mt-2">
-                                    Here you can find some top-notch packages for Embedded Systems
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1642059893618-22daf30e92a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2160&q=80)">
-                        <div class="featured-post-top position-absolute p-3 w-100 top-0">
-                            <a class="badge text-bg-primary" href="#">Packages</a>
-                        </div>
-                        <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
-                            <div class="inner-post-card position-relative">
-                                <h2 class="h4 mt-2">
-                                    P2P &mdash; Networking stack and library modularized out of The IPFS Project
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1647351408678-7ce4759a9c1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)">
-                        <div class="featured-post-top position-absolute p-3 w-100 top-0">
-                            <a class="badge text-bg-dark" href="#">Packages</a>
-                            <a class="badge text-bg-info" href="#">Parsers</a>
-                        </div>
-                        <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
-                            <div class="inner-post-card position-relative">
-                                <h2 class="h4 mt-2">
-                                    JSONy &mdash; A loose, direct to object json parser and serializer with hooks
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-3">
-                    <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1630857453903-0386bfb0d990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2160&q=80)">
-                        <div class="featured-post-top position-absolute p-3 w-100 top-0">
-                            <a class="badge text-bg-dark" href="#">GUIs</a>
-                            <a class="badge text-bg-info" href="#">Cross-Platform</a>
-                        </div>
-                        <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
-                            <div class="inner-post-card position-relative">
-                                <h2 class="h4 mt-2">
-                                    NiGui &mdash; Cross-platform desktop GUI toolkit for Nim language
-                                </h2>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <a href="/" class="logo fw-500 display-1 text-black text-decoration-none navbar-brand"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item mx-2">
+                        <a href="/about" class="nav-link">What's Nimble?</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="/browse" class="nav-link">🔥 Browse all Packages</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="/publish" class="nav-link">🤟 Publish your Package</a>
+                    </li>
+                    <li class="nav-item mx-2">
+                        <a href="/blog" class="nav-link">🗞 Blog</a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="https://github.com/nim-lang">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="https://github.com/nim-lang">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+                        </a>
+                    </li>
+                    <li class="nav-item ms-3">
+                        <a class="nav-link" href="https://github.com/nim-lang">
+                            <svg viewBox="0 0 24 24" width="18" height="18" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+                        </a>
+                    </li>
+                </ul>
             </div>
         </div>
-    </main>
-    <div class="container py-8">
-        <div class="row">
-            <div class="col-12">
-                <h1 class="fw-bold mb-2">Trending Packages</h1>
-            </div>
-        </div>
-        <div class="row g-4 mb-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
-                    <h3 class="lh-1 display-1 mb-2"><a href="#">compiler</a></h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Compiler package providing the compiler sources as a library</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">Nim</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
+    </nav>
+    <div class="container">
+        <div class="row g-4 pt-10 mt-4 mb-4 align-content-center">
+            <div class="col-lg-3">
+                <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1553227957-454e04fa8472?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)">
+                    <div class="featured-post-top position-absolute p-3 w-100 top-0">
+                        <a class="badge text-bg-light" href="#">Embedded Systems</a>
+                    </div>
+                    <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
+                        <div class="inner-post-card position-relative">
+                            <h2 class="h4 mt-2">
+                                Here you can find some top-notch packages for Embedded Systems
+                            </h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
-                    <h3 class="lh-1 display-1 mb-2"><a href="#">jester</a></h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">🃏 The sinatra-like web framework for Nim. Jester provides a DSL for quickly creating...</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">dom96</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
+            <div class="col-lg-3">
+                <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1642059893618-22daf30e92a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2160&q=80)">
+                    <div class="featured-post-top position-absolute p-3 w-100 top-0">
+                        <a class="badge text-bg-primary" href="#">Packages</a>
+                    </div>
+                    <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
+                        <div class="inner-post-card position-relative">
+                            <h2 class="h4 mt-2">
+                                P2P &mdash; Networking stack and library modularized out of The IPFS Project
+                            </h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
-                    <h3 class="lh-1 display-1 mb-2"><a href="#">pixie</a></h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Full-featured 2d graphics library for Nim language</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">treeform</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 4.0.0
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
+            <div class="col-lg-3">
+                <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1647351408678-7ce4759a9c1d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80)">
+                    <div class="featured-post-top position-absolute p-3 w-100 top-0">
+                        <a class="badge text-bg-dark" href="#">Packages</a>
+                        <a class="badge text-bg-info" href="#">Parsers</a>
+                    </div>
+                    <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
+                        <div class="inner-post-card position-relative">
+                            <h2 class="h4 mt-2">
+                                JSONy &mdash; A loose, direct to object json parser and serializer with hooks
+                            </h2>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
-                    <h3 class="lh-1 display-1 mb-2">
-                        <a href="#">zippy</a>
-                    </h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Pure Nim implementation of deflate, zlib, gzip and zip</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">guzba</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 0.9.7
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
-                    <h3 class="lh-1 display-1 mb-2">
-                        <a href="#">schedules</a>
-                    </h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">A Nim scheduler library that lets you kick off jobs at regular intervals.</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">soasme</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
-                    <h3 class="lh-1 display-1 mb-2">
-                        <a href="#">nico</a>
-                    </h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Game framework for the Nim programming language inspired by the PICO-8 API</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">ftsf</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="container py-8">
-        <div class="row">
-            <div class="col-12">
-                <h2 class="fw-bold mb-2">New Packages</h2>
-            </div>
-        </div>
-        <div class="row g-4">
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
-                    <h3 class="lh-1 display-1 mb-2"><a href="#">compiler</a></h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Compiler package providing the compiler sources as a library</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">Nim</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
-                    <h3 class="lh-1 display-1 mb-2"><a href="#">jester</a></h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">🃏 The sinatra-like web framework for Nim. Jester provides a DSL for quickly creating...</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">dom96</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
-                    <h3 class="lh-1 display-1 mb-2"><a href="#">pixie</a></h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Full-featured 2d graphics library for Nim language</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">treeform</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 4.0.0
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
-                    <h3 class="lh-1 display-1 mb-2">
-                        <a href="#">zippy</a>
-                    </h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Pure Nim implementation of deflate, zlib, gzip and zip</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">guzba</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 0.9.7
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
-                    <h3 class="lh-1 display-1 mb-2">
-                        <a href="#">schedules</a>
-                    </h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">A Nim scheduler library that lets you kick off jobs at regular intervals.</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">soasme</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
-                    <h3 class="lh-1 display-1 mb-2">
-                        <a href="#">nico</a>
-                    </h3>
-                    <p class="mb-0 pb-0" style="margin-bottom:0">Game framework for the Nim programming language inspired by the PICO-8 API</p>
-                    <ul class="package-box-meta-foot mt-1">
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M10.5 5a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0zm.061 3.073a4 4 0 10-5.123 0 6.004 6.004 0 00-3.431 5.142.75.75 0 001.498.07 4.5 4.5 0 018.99 0 .75.75 0 101.498-.07 6.005 6.005 0 00-3.432-5.142z"></path></svg>
-                            <a href="#">ftsf</a>
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom">
-                                <path fill-rule="evenodd" d="M2.5 7.775V2.75a.25.25 0 01.25-.25h5.025a.25.25 0 01.177.073l6.25 6.25a.25.25 0 010 .354l-5.025 5.025a.25.25 0 01-.354 0l-6.25-6.25a.25.25 0 01-.073-.177zm-1.5 0V2.75C1 1.784 1.784 1 2.75 1h5.025c.464 0 .91.184 1.238.513l6.25 6.25a1.75 1.75 0 010 2.474l-5.026 5.026a1.75 1.75 0 01-2.474 0l-6.25-6.25A1.75 1.75 0 011 7.775zM6 5a1 1 0 100 2 1 1 0 000-2z"></path>
-                            </svg> 5.1.2
-                        </li>
-                        <li class="text-gray">
-                            <svg width="16" height="16" viewBox="0 0 16 16" style="display:inline-block;vertical-align:text-bottom"><path fill-rule="evenodd" d="M8.75.75a.75.75 0 00-1.5 0V2h-.984c-.305 0-.604.08-.869.23l-1.288.737A.25.25 0 013.984 3H1.75a.75.75 0 000 1.5h.428L.066 9.192a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.514 3.514 0 00.686.45A4.492 4.492 0 003 11c.88 0 1.556-.22 2.023-.454a3.515 3.515 0 00.686-.45l.045-.04.016-.015.006-.006.002-.002.001-.002L5.25 9.5l.53.53a.75.75 0 00.154-.838L3.822 4.5h.162c.305 0 .604-.08.869-.23l1.289-.737a.25.25 0 01.124-.033h.984V13h-2.5a.75.75 0 000 1.5h6.5a.75.75 0 000-1.5h-2.5V3.5h.984a.25.25 0 01.124.033l1.29.736c.264.152.563.231.868.231h.162l-2.112 4.692a.75.75 0 00.154.838l.53-.53-.53.53v.001l.002.002.002.002.006.006.016.015.045.04a3.517 3.517 0 00.686.45A4.492 4.492 0 0013 11c.88 0 1.556-.22 2.023-.454a3.512 3.512 0 00.686-.45l.045-.04.01-.01.006-.005.006-.006.002-.002.001-.002-.529-.531.53.53a.75.75 0 00.154-.838L13.823 4.5h.427a.75.75 0 000-1.5h-2.234a.25.25 0 01-.124-.033l-1.29-.736A1.75 1.75 0 009.735 2H8.75V.75zM1.695 9.227c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L3 6.327l-1.305 2.9zm10 0c.285.135.718.273 1.305.273s1.02-.138 1.305-.273L13 6.327l-1.305 2.9z"></path>
-                            </svg>
-                            MIT
-                        </li>
-                    </ul>
+            <div class="col-lg-3">
+                <div class="featured-post-thumbnail rounded overflow-hidden position-relative" style="background-image:url(https://images.unsplash.com/photo-1630857453903-0386bfb0d990?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2160&q=80)">
+                    <div class="featured-post-top position-absolute p-3 w-100 top-0">
+                        <a class="badge text-bg-dark" href="#">GUIs</a>
+                        <a class="badge text-bg-info" href="#">Cross-Platform</a>
+                    </div>
+                    <div class="featured-post-card position-absolute p-3 pb-5 w-100 bottom-0">
+                        <div class="inner-post-card position-relative">
+                            <h2 class="h4 mt-2">
+                                NiGui &mdash; Cross-platform desktop GUI toolkit for Nim language
+                            </h2>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>

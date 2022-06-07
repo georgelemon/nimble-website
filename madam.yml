@@ -1,5 +1,5 @@
 name: "Madam is Awesome"
-path: "./example"
+path: "./src"
 port: 1230
 templates:
     views: "views"
@@ -11,10 +11,11 @@ routes:
         about: "about.html"
         pkg/watchout: "package.html"
         publish: "publish.html"
+        blog: "blog.html"
 
 # Static Assets Settings
 assets:
-    source: "./dist/assets/*"        # Path on disk for indexing all files inside assets directory
+    source: "./dist"                 # Path on disk for indexing all files inside assets directory
     public: "/assets"                # Public route for accessing the static assets
 
 # Customize console output
