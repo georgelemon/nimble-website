@@ -1,6 +1,10 @@
+:root {
+    --dark-color: #1d2026;
+}
+
 body {
     background-color: #f7f5ee;
-    color: #1D2026;
+    color: var(--dark-color);
     font-size: 1.4em;
 }
 
@@ -44,14 +48,18 @@ body {
 .spotlight:after {
     position: absolute;
     right: 35px;
-    top: 12px;
+    top: 17px;
     content: "/";
     color: lightblue;
     border: 1px lightblue solid;
-    width: 24px;
-    border-radius: 5px;
+    width: 36px;
+    border-radius: 60px;
     display: inline-block;
     text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    height: 36px;
+    line-height: 33px;
 }
 
 .tags-area {
@@ -239,7 +247,11 @@ body.dark-theme .spotlight:after {
     border-color: #444850;
 }
 
-body.dark-theme .top-nav a {
+body.dark-theme .navbar {
+    background-color: var(--dark-color);
+}
+
+body.dark-theme .navbar-nav a {
     color: lightblue;
     font-size: 1.3rem;
 }
