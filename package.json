@@ -1,0 +1,18 @@
+{
+    "name": "nimble-website",
+    "version": "0.1.1",
+    "description": "A better looking Nimble",
+    "license": "MIT",
+    "repository": "git@github.com:georgelemon/nimble-website.git",
+    "author": "George Lemon <georgelemon@protonmail.com>",
+    "scripts": {
+        "watch": "rollup -c -w",
+        "build": "rollup -c"
+    },
+    "devDependencies": {
+        "@rollup/plugin-commonjs": "^19.0.0",
+        "@rollup/plugin-node-resolve": "^13.0.0",
+        "rollup": "^2.50.5",
+        "rollup-plugin-terser": "^7.0.2"
+    }
+}
