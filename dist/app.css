@@ -8,6 +8,19 @@ body {
     font-size: 1.4em;
 }
 
+pre {
+    padding: 15px;
+    border-radius: 10px;
+}
+
+body.dark-theme .dark-mode-icon {
+    display: none;
+}
+
+body.light-theme .light-mode-icon {
+    display: none;
+}
+
 .list-unstyled {
     list-style: none;
     padding: 0;
@@ -149,7 +162,7 @@ body {
 }
 
 .box {
-    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+    transition: box-shadow .15s ease-in-out;
 }
 
 /**
@@ -206,8 +219,6 @@ article p {
 
 .dark-theme pre {
     background: #1d2026;
-    padding: 15px;
-    border-radius: 10px;
 }
 
 .dark-theme .box:hover {

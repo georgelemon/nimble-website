@@ -1,5 +1,8 @@
 class NimbleApp {
 
+    /**
+     * @param  {Object} settings
+     */
     constructor(settings = {}) {
         if (settings.enableColorScheme == true)
             this.#enableColorScheme()
@@ -7,8 +10,23 @@ class NimbleApp {
             this.#enableSpotlightFocus()
     }
 
+    /**
+     * Enable Theme switcher
+     * @return {Void}
+     */
     #enableColorScheme() {
-        // 
+        let themeSwitcher = document.querySelector('.theme-switcher-btn')
+        themeSwitcher.addEventListener('click', function(){
+            if (localStorage.getItem('theme') == "dark") {
+                localStorage.setItem('theme', 'light')
+                document.body.classList.remove('dark-theme')
+                document.body.classList.add('light-theme')
+            } else {
+                localStorage.setItem('theme', 'dark')
+                document.body.classList.remove('light-theme')
+                document.body.classList.add('dark-theme')
+            }
+        })
     }
 
     /**
@@ -37,6 +55,7 @@ class NimbleApp {
  */
 export async function init(settings = {}) {
     new NimbleApp({
-        enableSpotlightFocus: true
+        enableSpotlightFocus: true,
+        enableColorScheme: true
     })
 }
