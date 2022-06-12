@@ -91,7 +91,19 @@ body {
     position: relative;
 }
 
-.box:after {
+.box.box-pkg {
+    min-height: 141px;
+    max-height: 141px;
+    overflow: hidden;
+}
+
+.box.box-expand {
+    min-height: auto !important;
+    max-height: fit-content;
+    height: auto !important
+}
+
+.box[stars]:after {
     content: attr(stars) " ★";
     position: absolute;
     top: 15px;
@@ -103,12 +115,11 @@ body {
 
 .box a {
     text-decoration: none;
-    font-weight: 800;
+    font-weight: 600;
 }
 
 .box h3 {
     font-size: 1.2em;
-    font-weight: 600;
 }
 
 .box p {
@@ -261,10 +272,16 @@ body.dark-theme #hero-landing-page {
 }
 
 body.dark-theme .box {
-    /*color: #8A94A7;*/
-    color: #6a7281;
     background-color: #242830;
     border-color: #242830;
+}
+
+body.dark-theme .box.box-expand * {
+    color: #c2c7cf;
+}
+
+body.dark-theme .box.box-pkg {
+    color: #8A94A7;
 }
 
 body.dark-theme .box article {
