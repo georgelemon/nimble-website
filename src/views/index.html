@@ -5,52 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nimble 👑 Nim's Package Manager</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/app.css">
+    <link rel="stylesheet" href="/assets/app.css">
     <script src="assets/app.min.js"></script>
     <style>
-        .box {
-            min-height: 141px;
-            max-height: 141px;
-            overflow: hidden;
-        }
-
-        .box h3 a {
-            font-weight: 500;
-        }
-
         .light-theme #top-nav a {
             color: darkblue;
-        }
-
-        .tags-area a {
-            /*color: #242830;*/
-        }
-
-        .spin-icon {
-            top: 34px;
-            right: 120px;
-            width: 24px;
-            zoom: 0.6;
-            height: 24px;
-            position: absolute;
-            -webkit-animation:spin 2.3s linear infinite;
-            -moz-animation:spin 2.3s linear infinite;
-            animation:spin 2.3s linear infinite;
-        }
-
-        .spin-icon svg {stroke: #f5e558;}
-
-        @-moz-keyframes spin { 
-            100% { -moz-transform: rotate(360deg); } 
-        }
-        @-webkit-keyframes spin { 
-            100% { -webkit-transform: rotate(360deg); } 
-        }
-        @keyframes spin { 
-            100% { 
-                -webkit-transform: rotate(360deg); 
-                transform:rotate(360deg); 
-            } 
         }
     </style>
 
@@ -139,7 +98,7 @@
         </div>
         <div class="row g-4 mb-4">
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
+                <div class="box box-pkg rounded p-3" stars="+12K">
                     <h3 class="lh-1 display-1 mb-2"><a href="#">compiler</a></h3>
                     <p class="mb-0 pb-0" style="margin-bottom:0">Compiler package providing the compiler sources as a library</p>
                     <ul class="package-box-meta-foot mt-1">
@@ -161,7 +120,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
+                <div class="box box-pkg rounded p-3" stars="+1K">
                     <h3 class="lh-1 display-1 mb-2"><a href="#">jester</a></h3>
                     <p class="mb-0 pb-0" style="margin-bottom:0">🃏 The sinatra-like web framework for Nim. Jester provides a DSL for quickly creating...</p>
                     <ul class="package-box-meta-foot mt-1">
@@ -183,7 +142,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
+                <div class="box box-pkg rounded p-3" stars="+400">
                     <h3 class="lh-1 display-1 mb-2"><a href="#">pixie</a></h3>
                     <p class="mb-0 pb-0" style="margin-bottom:0">Full-featured 2d graphics library for Nim language</p>
                     <ul class="package-box-meta-foot mt-1">
@@ -205,7 +164,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
+                <div class="box box-pkg rounded p-3" stars="+12K">
                     <h3 class="lh-1 display-1 mb-2">
                         <a href="#">zippy</a>
                     </h3>
@@ -229,7 +188,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
+                <div class="box box-pkg rounded p-3" stars="+1K">
                     <h3 class="lh-1 display-1 mb-2">
                         <a href="#">schedules</a>
                     </h3>
@@ -253,7 +212,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
+                <div class="box box-pkg rounded p-3" stars="+400">
                     <h3 class="lh-1 display-1 mb-2">
                         <a href="#">nico</a>
                     </h3>
@@ -287,7 +246,7 @@
         </div>
         <div class="row g-4">
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
+                <div class="box box-pkg rounded p-3" stars="+12K">
                     <h3 class="lh-1 display-1 mb-2"><a href="#">compiler</a></h3>
                     <p class="mb-0 pb-0" style="margin-bottom:0">Compiler package providing the compiler sources as a library</p>
                     <ul class="package-box-meta-foot mt-1">
@@ -309,7 +268,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
+                <div class="box box-pkg rounded p-3" stars="+1K">
                     <h3 class="lh-1 display-1 mb-2"><a href="#">jester</a></h3>
                     <p class="mb-0 pb-0" style="margin-bottom:0">🃏 The sinatra-like web framework for Nim. Jester provides a DSL for quickly creating...</p>
                     <ul class="package-box-meta-foot mt-1">
@@ -331,7 +290,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
+                <div class="box box-pkg rounded p-3" stars="+400">
                     <h3 class="lh-1 display-1 mb-2"><a href="#">pixie</a></h3>
                     <p class="mb-0 pb-0" style="margin-bottom:0">Full-featured 2d graphics library for Nim language</p>
                     <ul class="package-box-meta-foot mt-1">
@@ -353,7 +312,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+12K">
+                <div class="box box-pkg rounded p-3" stars="+12K">
                     <h3 class="lh-1 display-1 mb-2">
                         <a href="#">zippy</a>
                     </h3>
@@ -377,7 +336,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+1K">
+                <div class="box box-pkg rounded p-3" stars="+1K">
                     <h3 class="lh-1 display-1 mb-2">
                         <a href="#">schedules</a>
                     </h3>
@@ -401,7 +360,7 @@
                 </div>
             </div>
             <div class="col-lg-4 col-md-6">
-                <div class="box rounded p-3" stars="+400">
+                <div class="box box-pkg rounded p-3" stars="+400">
                     <h3 class="lh-1 display-1 mb-2">
                         <a href="#">nico</a>
                     </h3>
