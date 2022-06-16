@@ -166,6 +166,27 @@ body.light-theme .light-mode-icon {
 }
 
 /**
+ * Package page
+ */
+
+.nimble-install pre {
+    padding: 25px 15px;
+    font-family: monospace;
+    color: #ffffff;
+    font-weight: normal;
+    background-color: #242830 !important;
+    font-size: 1.9rem;
+}
+
+.nimble-install pre:before {
+    content: "$";
+    font-weight: normal;
+    color: white;
+    margin-right: 15px;
+    opacity: .2;
+}
+
+/**
  * Blog
  */
 
